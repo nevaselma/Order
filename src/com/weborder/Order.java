@@ -59,7 +59,8 @@ public class Order {
 				
 				Thread.sleep(1000);
 				
-				int cardChoice =rg.nextInt(3)+1;
+				int cardChoice = rg.nextInt(3)+1;
+				System.out.println(cardChoice);
 				
 				switch(cardChoice) {
 				case 1:{
@@ -109,8 +110,8 @@ public class Order {
 				
 				
 				String expected = "New order has been successfully added";
-				String actual =driver.findElement(By.xpath("//*[@id=\"ctl00_MainContent_fmwOrder\"]/tbody/tr/td/div/strong"))
-				.getText(); 
+				String actual =driver.findElement(By.xpath("//*[@id=\"ctl00_MainContent_fmwOrder\"]/tbody/tr/td/div/strong")).getText();
+				 
 				if(actual.contains(expected)){
 					System.out.println("pass");
 				}
